@@ -1,0 +1,413 @@
+/* ОБНУЛЕНИЕ СТИЛЕЙ, ЕГО НЕ ТРОГАЕМ */
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/* ------------------------------------------------ */
+
+
+
+
+
+/* СТИЛИЗУЕМ ПРИЛОЖЕНИЕ */
+
+.html {
+  background-color: rgb(247, 246, 245);
+}
+
+.app {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0px 30px 30px 30px;
+  font-family: Cera Pro, sans-serif;
+  font-size: 18px;
+}
+
+/* ------------------------------------------------ */
+
+
+
+
+
+/* ХЕДЕР */
+
+.header nav {
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* .header__icon-block {} */
+
+.header__icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 30px;
+}
+
+/* .header__products-row {} */
+
+.header__product {
+  border-right: 1px solid rgb(147, 146, 144);
+  padding: 0px 10px 0px 5px;
+  color: rgb(0, 0, 0);
+}
+
+.header__product.last {
+  border-right: none;
+}
+
+/* ------------------------------------------------ */
+
+
+
+
+
+/* МЕЙН */
+
+.main {
+  margin: 50px 0px 30px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* большая картинка */
+.main__ad-image-block {
+  margin: 0 auto;
+
+}
+
+.main__ad-image {
+  border-radius: 12px;
+  max-width: 980px;
+}
+
+/* --------------------- */
+
+
+
+/* то самое большое название */
+.main__products-name {
+  margin: 80px 0px 20px 0px;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+/* --------------------- */
+
+
+
+/* сетка */
+.main__grid-products {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin: 0px 0px 30px 0px;
+
+}
+
+/* --------------------- */
+
+
+
+/* товр */
+.main__product-info-block {
+  max-width: 200px;
+  text-align: center;
+  line-height: 1.2;
+  margin: 20px auto;
+}
+
+.main__product-image {
+  max-width: 200px;
+  border-radius: 12px;
+}
+
+.main__product-name {
+  margin: 25px 0px 0px 0px;
+  font-size: 20px;
+  color: rgb(147, 146, 144);
+}
+
+.main__product-price {
+  margin: 15px 0px 0px 0px;
+  font-size: 24px;
+  color: rgb(228, 0, 43);
+}
+
+/* ------------------------------------------------ */
+
+
+
+
+
+/* ФУТЕР */
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid rgb(147, 146, 144);
+  padding-top: 30px;
+  margin-top: 150px;
+  font-size: 14px;
+}
+
+/* .footer__copyright {} */
+
+/* .footer__row-of-useful-hrefs {} */
+
+.footer__useful-href {
+  border-right: 1px solid rgb(147, 146, 144);
+  padding: 0px 10px 0px 5px;
+  color: rgb(0, 0, 0);
+}
+
+.footer__useful-href.last {
+  border: none;
+}
+
+/* .footer__idk-whats-is-it-will {} */
+
+/* ------------------------------------------------ */
+
+
+
+
+/* АДАПТАЦИЯ, ВСЕГДА СНИЗУ */
+
+@media screen and (max-width: 1100px) {
+  .main__ad-image {
+    max-width: 720px;
+  }
+}
+
+
+@media screen and (max-width: 1100px) {
+  .main__ad-image {
+    max-width: 720px;
+  }
+
+  .main__product-image {
+    max-width: 160px;
+  }
+}
+
+
+@media screen and (max-width: 780px) {
+  .main__ad-image {
+    max-width: 580px;
+  }
+
+  .main__grid-products {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .footer {
+    flex-direction: column;
+  }
+
+  .footer__row-of-useful-hrefs {
+    margin: 15px 0px 15px 0px;
+  }
+}
+
+
+@media screen and (max-width: 650px) {
+  .header {
+    font-size: 16px;
+  }
+
+  .main__ad-image {
+    max-width: 480px;
+  }
+
+  .main__products-name {
+    font-size: 28px;
+  }
+
+  .main__grid-products {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .main__product-name {
+    font-size: 16px;
+  }
+
+  .main__product-price {
+    font-size: 20px;
+  }
+}
+
+
+@media screen and (max-width: 550px) {
+  .main__ad-image {
+    max-width: 380px;
+  }
+
+  .main__grid-products {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer {
+    font-size: 12px;
+  }
+}
+
+
+@media screen and (max-width: 450px) {
+  .main__ad-image {
+    max-width: 300px;
+  }
+
+  .main__grid-products {
+    grid-template-columns: 1fr;
+  }
+
+  .main__product-image {
+    max-width: 200px;
+  }
+
+  .main__product-name {
+    font-size: 18px;
+  }
+
+  .main__product-price {
+    font-size: 22px;
+  }
+
+  .header__icon-block {
+    visibility: hidden;
+    display: none;
+  }
+
+  .header__icon {
+    visibility: hidden;
+    display: none;
+  }
+}
+
+
+@media screen and (max-width: 350px) {
+  .header {
+    font-size: 14px;
+  }
+
+  .main__ad-image {
+    max-width: 250px;
+  }
+
+  .main__grid-products {
+    grid-template-columns: 1fr;
+  }
+
+  .main__product-image {
+    max-width: 200px;
+  }
+
+  .main__product-name {
+    font-size: 18px;
+  }
+
+  .main__product-price {
+    font-size: 22px;
+  }
+
+  .header__icon-block {
+    visibility: hidden;
+    display: none;
+  }
+
+  .header__icon {
+    visibility: hidden;
+    display: none;
+  }
+}
+
+/* КОНЕЦ */
